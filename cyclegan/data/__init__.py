@@ -29,6 +29,9 @@ def CreateDataset(opt):
     elif opt.dataset_mode == 'svhn_mnist':
         from data.svhn_mnist_dataset import SvhnMnistDataset
         dataset = SvhnMnistDataset()
+    elif opt.dataset_mode == 'pollen':
+        from data.pollen_dataset import PollenDataset
+        dataset = PollenDataset()
   
     else:
         raise ValueError("Dataset [%s] not recognized." % opt.dataset_mode)
