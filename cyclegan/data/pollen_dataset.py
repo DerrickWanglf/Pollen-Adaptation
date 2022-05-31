@@ -62,7 +62,7 @@ class PollenDataset(BaseDataset):
             self.shuffle_indices()
 
         trainingImgName = self.trainingImgsPaths[self.training_indices[index % len(self.trainingImgsPaths)]]
-        referenceImgName = self.trainingImgsPaths[self.training_indices[index % len(self.trainingImgsPaths)]]
+        referenceImgName = self.referenceImgsPaths[self.reference_indices[index % len(self.referenceImgsPaths)]]
     
         A_img = cv2.imread(trainingImgName)
         # A_img = A_img.resize((32, 32))
